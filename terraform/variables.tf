@@ -41,5 +41,5 @@ variable "acr_name" {
 variable "custom_domain" {
   description = "Custom domain name"
   type        = string
-  default = "dyemo.co.uk"
+  default = "tm.dyemo.co.uk"
 }
