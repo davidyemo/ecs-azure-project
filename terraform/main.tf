@@ -27,6 +27,14 @@ module "acr" {
  
   }
   
+module "frontdoor" {
+  source              = "./modules/frontdoor"
+  resource_group_name = var.resource_group_name
+  location            = var.location
+  container_app_fqdn  = module.container_app.container_app_fqdn
+  custom_domain       = var.custom_domain
+  depends_on          = [module.container_app]
+}
 
 
 

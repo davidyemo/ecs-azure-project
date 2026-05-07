@@ -37,3 +37,9 @@ variable "acr_name" {
     type = string
     default = "ecsazurecontainerregistry1"
 }
+
+variable "custom_domain" {
+  description = "Custom domain name"
+  type        = string
+  default = "dyemo.co.uk"
+}

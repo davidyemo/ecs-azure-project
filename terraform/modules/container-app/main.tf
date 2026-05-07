@@ -33,15 +33,23 @@ resource "azurerm_container_app" "container_app" {
     password_secret_name = "acr-password"
 
   }
-
-   
-
- template {
-    container {
-      name   = var.container_app_name
-      image = var.container_app_image
-      cpu    = var.cpu
-      memory = var.memory
+ 
+    ingress {
+      external_enabled = true
+      target_port      = 3000
+      transport        = "http"
+      traffic_weight {
+        percentage      = 100
+        latest_revision = true
+      }
     }
-  }
+
+    template {
+      container {
+        name   = var.container_app_name
+        image = var.container_app_image
+        cpu    = var.cpu
+        memory = var.memory
+      }
+    }
 }
