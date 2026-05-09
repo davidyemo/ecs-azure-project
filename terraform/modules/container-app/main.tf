@@ -45,6 +45,9 @@ resource "azurerm_container_app" "container_app" {
     }
 
     template {
+      min_replicas = var.min_replicas
+      max_replicas = var.max_replicas
+
       container {
         name   = var.container_app_name
         image = var.container_app_image

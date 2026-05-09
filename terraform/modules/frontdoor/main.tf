@@ -23,6 +23,7 @@ resource "azurerm_cdn_frontdoor_origin" "frontdoor_origin" {
   certificate_name_check_enabled = var.certificate_check_enabled
 
   host_name  = var.container_app_fqdn
+  origin_host_header = var.container_app_fqdn
   http_port  = var.http_port
   https_port = var.https_port
 }

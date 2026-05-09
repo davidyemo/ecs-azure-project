@@ -90,3 +90,17 @@ type = string
 sensitive = true
    
 }
+
+variable "min_replicas" {
+    description = "Minimum number of container app replicas"
+    type = number
+    default = 1
+  
+}
+
+variable "max_replicas" {
+    description = "Maximum number of container app replicas"
+    type = number
+    default = 3
+  
+}
