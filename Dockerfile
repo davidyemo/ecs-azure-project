@@ -4,10 +4,10 @@ WORKDIR /app
 
 EXPOSE 3000
 
-COPY requirements.txt .
+COPY app/requirements.txt .
 
 RUN pip install -r requirements.txt
 
-COPY . . 
+COPY app/ .
 
 CMD ["python3", "app.py"]
