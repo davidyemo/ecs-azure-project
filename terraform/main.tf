@@ -3,6 +3,11 @@ resource "azurerm_resource_group" "resource_group" {
   location = var.location
 }
 
+resource "azurerm_resource_group" "destroy_rg" {
+  name     = "destroy-rg"
+  location = "UK South"
+}
+
 # Creating Azure Container Registry
 
 module "acr" {
