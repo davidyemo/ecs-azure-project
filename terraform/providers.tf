@@ -1,11 +1,12 @@
 terraform {
+  # Configure the required providers
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
       version = "=4.68.0"
     }
   }
-
+# Configure the Azure Resource Manager provider
   backend "azurerm" {
     resource_group_name  = "ecs-rg1"
     storage_account_name = "ecstfstate"
@@ -13,7 +14,7 @@ terraform {
     key                  = "terraform.tfstate"
   }
 }
-
+# Configure the Azure Resource Manager provider
 provider "azurerm" {
   features {}
   client_id       = var.client_id
