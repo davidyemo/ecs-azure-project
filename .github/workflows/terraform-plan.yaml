@@ -1,5 +1,6 @@
 name: Terraform Plan
 
+# Triggers on pull requests targeting main — allows review of infrastructure changes before merging
 on:
   pull_request:
     branches:
@@ -9,6 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    # Azure authentication credentials and Terraform variable values from GitHub secrets
     env:
          ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
          ARM_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
@@ -20,25 +22,27 @@ jobs:
          TF_VAR_subscription_id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
          TF_VAR_tenant_id: ${{ secrets.AZURE_TENANT_ID }}
 
-        
-
     steps:
+    # Pull the latest code from the repository
     - name: Checkout code
       uses: actions/checkout@v2
 
+    # Install the specified version of Terraform on the runner
     - name: Set up Terraform
       uses: hashicorp/setup-terraform@v1
 
+    # Initialise Terraform and connect to the remote state backend in Azure Blob Storage
     - name: Terraform Init
       working-directory: ./terraform
       run: terraform init
 
+    # Generate and display an execution plan showing what changes will be made
     - name: Terraform Plan
       working-directory: ./terraform
       run: terraform plan -out=tfplan
 
+    # Scan Terraform files for security misconfigurations before deployment
     - name: Security Scan
       uses: aquasecurity/tfsec-action@v1.0.0
       with:
         working_directory: ./terraform
-

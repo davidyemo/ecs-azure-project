@@ -1,5 +1,6 @@
 name: Terraform Destroy
 
+# Manually triggered from GitHub Actions UI to avoid accidental destruction of infrastructure
 on:
   workflow_dispatch:
 
@@ -7,6 +8,7 @@ jobs:
   destroy:
     runs-on: ubuntu-latest
 
+    # Azure authentication credentials and Terraform variable values from GitHub secrets
     env:
       ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
       ARM_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
@@ -18,16 +20,20 @@ jobs:
       TF_VAR_tenant_id: ${{ secrets.AZURE_TENANT_ID }}
 
     steps:
+    # Pull the latest code from the repository
     - name: Checkout code
       uses: actions/checkout@v2
 
+    # Install the specified version of Terraform on the runner
     - name: Set up Terraform
       uses: hashicorp/setup-terraform@v1
 
+    # Initialise Terraform and connect to the remote state backend in Azure Blob Storage
     - name: Terraform Init
       working-directory: ./terraform
       run: terraform init
 
+    # Destroy all Terraform managed infrastructure without manual approval
     - name: Terraform Destroy
       working-directory: ./terraform
-      run: terraform destroy -auto-approve -target=azurerm_resource_group.destroy_rg
+      run: terraform destroy -auto-approve 

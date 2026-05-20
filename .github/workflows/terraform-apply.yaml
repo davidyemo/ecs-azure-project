@@ -1,5 +1,6 @@
 name: Terraform Apply
 
+# Triggers on every push to main branch — deploys infrastructure changes to Azure
 on:
   push:
     branches:
@@ -9,6 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    # Azure authentication credentials and Terraform variable values from GitHub secrets
     env:
         ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
         ARM_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
@@ -21,16 +23,20 @@ jobs:
         TF_VAR_tenant_id: ${{ secrets.AZURE_TENANT_ID }}
 
     steps:
+    # Pull the latest code from the repository
     - name: Checkout code
       uses: actions/checkout@v2
 
+    # Install the specified version of Terraform on the runner
     - name: Set up Terraform
       uses: hashicorp/setup-terraform@v1
 
+    # Initialise Terraform and connect to the remote state backend in Azure Blob Storage
     - name: Terraform Init
       working-directory: ./terraform
       run: terraform init
 
+    # Apply infrastructure changes without manual approval
     - name: Terraform Apply
       working-directory: ./terraform
       run: terraform apply -auto-approve
