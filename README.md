@@ -38,6 +38,43 @@ Terraform provisions and manages all Azure infrastructure
 Azure Front Door routes HTTPS traffic to the Container App
 Cloudflare handles DNS resolution for the custom domain
 
+## Project Structure
+
+taskhub-azure-project/
+├── .github/
+│   └── workflows/
+│       ├── push-docker-image.yml     # CI: Build and push Docker image to ACR
+│       ├── terraform-plan.yml        # CI: Terraform plan to preview changes
+│       ├── terraform-apply.yml       # CD: Terraform apply to deploy infra
+│       └── terraform-destroy.yml     # CD: Terraform destroy to tear down infra
+│
+├── app/                              # Task manager app
+│   ├── static/
+│   │   ├── script.js
+│   │   └── style.css
+│   ├── templates/
+│   │   └── index.html
+│   ├── app.py
+│   └── requirements.txt
+│
+├── images/                           # Architecture diagrams
+│
+├── terraform/
+│   ├── modules/                      # Terraform modules for reusable infra
+│   │   ├── acr/                      # Azure Container Registry module
+│   │   ├── container-app/            # Azure Container App module
+│   │   └── frontdoor/                # Azure Front Door module
+│   ├── state-storage/                # Remote backend state storage config
+│   ├── .terraform.lock.hcl
+│   ├── main.tf
+│   ├── providers.tf
+│   └── variables.tf
+│
+├── .gitignore
+├── Dockerfile
+└── README.md
+
+
 ## Project Goals
 
 Containerise Task Manager app
