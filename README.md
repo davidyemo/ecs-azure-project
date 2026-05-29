@@ -6,6 +6,14 @@ The application allows users to create, manage, and track tasks with priority le
 
 ![TaskHub Architecture](images/ecs-image1.png)
 
+## TaskHub Demo
+
+https://github.com/user-attachments/assets/2d81250f-f50c-4c4b-b1dd-f62e554a01e0
+
+
+
+
+
 ## Tech Stack
 
 Application: Python Flask
