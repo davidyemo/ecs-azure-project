@@ -2,6 +2,14 @@
 TaskHub is a cloud-native task management web application built with Python Flask, containerised with Docker, and deployed on Microsoft Azure using modern DevOps practices.
 The application allows users to create, manage, and track tasks with priority levels, categories, due dates, and completion status — all served securely over HTTPS via a custom domain.
 
+### Project Goals
+
+- Containerise Task Manager app
+- Push it securely to Azure Container Registry (ACR)
+- Provision infrastructure as code using Terraform
+- Enable end-to-end CI/CD using GitHub Actions
+- Serve the app publicly via custom HTTPS domain using Azure Front Door, with DNS resolution managed by Cloudflare
+
 ## Architecture Diagram
 
 ![TaskHub Architecture](images/ecs-image1.png)
@@ -76,11 +84,3 @@ taskhub-azure-project/
 └── README.md
 ```
 
-
-## Project Goals
-
-Containerise Task Manager app
-Push it securely to Azure Container Registry (ACR)
-Provision infrastructure as code using Terraform
-Enable end-to-end CI/CD using GitHub Actions
-Serve the app publicly via custom HTTPS domain using Azure Front Door, with DNS resolution managed by Cloudflare
