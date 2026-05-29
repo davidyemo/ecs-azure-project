@@ -84,3 +84,41 @@ taskhub-azure-project/
 └── README.md
 ```
 
+## Workflow
+
+### 1. Containerize the App and Push to ACR
+
+- Built a Docker image from the Python Flask app
+- Created Azure Container Registry (ACR) using Terraform
+- Tagged and pushed the image to ACR
+
+### 2. CI/CD Pipelines
+
+**Docker Pipeline** — triggers on push to main
+- Builds and tests the Docker image
+- Pushes the image to ACR
+
+**Terraform Plan** — triggers on pull request to main
+- Runs `terraform plan` to preview infrastructure changes
+- Runs tfsec security scan on Terraform code
+
+**Terraform Apply** — triggers on push to main
+- Runs `terraform apply` to deploy infrastructure changes to Azure
+
+**Terraform Destroy** — manually triggered
+- Runs `terraform destroy` to tear down all Azure infrastructure
+
+### 3. Terraform deployment
+
+Terraform is used to provision and manage all Azure infrastructure as code. 
+Resources are organised into reusable modules, making the configuration clean and maintainable. 
+The remote state is stored in an Azure Storage Account so both local and CI/CD pipeline deployments share the same state, preventing conflicts.
+
+### 4. Expose Application via HTTPS
+
+The application is exposed publicly using **Azure Front Door** provisioned via Terraform. Front Door handles HTTPS termination, routes traffic to the Container App, and serves the app via a custom domain.
+
+**Custom Domain:** `https://tm.dyemo.co.uk`  
+**DNS:** Managed by Cloudflare with a CNAME record pointing to the Front Door endpoint  
+**SSL Certificate:** Automatically issued and managed by Azure Front Door
+
