@@ -18,14 +18,16 @@ The application allows users to create, manage, and track tasks with priority le
 
 ## Tech Stack
 
-Application: Python Flask
-Containerisation: Docker
-Cloud Provider: Microsoft Azure
-Infrastructure as Code: Terraform
-CI/CD: GitHub Actions
-Container Registry: Azure Container Registry (ACR)
-Hosting: Azure Container Apps
-DNS & CDN: Azure Front Door + Cloudflare
+| Category | Technology |
+|---|---|
+| Application | Python Flask |
+| Containerisation | Docker |
+| Cloud Provider | Microsoft Azure |
+| Infrastructure as Code | Terraform |
+| CI/CD | GitHub Actions |
+| Container Registry | Azure Container Registry (ACR) |
+| Hosting | Azure Container Apps |
+| DNS & CDN | Azure Front Door + Cloudflare |
 
 ## Architecture
 The project follows a fully automated cloud deployment pipeline:
