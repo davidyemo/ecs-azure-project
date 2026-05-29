@@ -8,7 +8,8 @@ The application allows users to create, manage, and track tasks with priority le
 
 ## TaskHub Demo
 
-https://github.com/user-attachments/assets/2d81250f-f50c-4c4b-b1dd-f62e554a01e0
+<img width="800" height="450" alt="TaskHub_Recording-ezgif com-censor" src="https://github.com/user-attachments/assets/be972774-376b-4856-bc82-adc6b7ca2d1d" />
+
 
 
 
