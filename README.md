@@ -40,6 +40,7 @@ Cloudflare handles DNS resolution for the custom domain
 
 ## Project Structure
 
+```
 taskhub-azure-project/
 ├── .github/
 │   └── workflows/
@@ -73,6 +74,7 @@ taskhub-azure-project/
 ├── .gitignore
 ├── Dockerfile
 └── README.md
+```
 
 
 ## Project Goals
