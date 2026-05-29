@@ -58,7 +58,7 @@ taskhub-azure-project/
 │   ├── app.py
 │   └── requirements.txt
 │
-├── images/                           # Architecture diagrams
+├── images/                           
 │
 ├── terraform/
 │   ├── modules/                      # Terraform modules for reusable infra
