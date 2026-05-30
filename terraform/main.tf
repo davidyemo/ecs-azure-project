@@ -2,15 +2,10 @@ resource "azurerm_resource_group" "resource_group" {
   name     = var.resource_group_name
   location = var.location
 }
-<<<<<<< Updated upstream
+
 # add a comment to main.tf
-=======
-##test
-resource "azurerm_resource_group" "example" {
-  name     = "example"
-  location = "West Europe"
-}
->>>>>>> Stashed changes
+
+
 
 # Creating Azure Container Registry
 
