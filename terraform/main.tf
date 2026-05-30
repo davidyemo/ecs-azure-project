@@ -2,6 +2,11 @@ resource "azurerm_resource_group" "resource_group" {
   name     = var.resource_group_name
   location = var.location
 }
+##
+resource "azurerm_resource_group" "example" {
+  name     = "example"
+  location = "West Europe"
+}
 
 # Creating Azure Container Registry
 
@@ -27,6 +32,7 @@ module "acr" {
  
   }
   
+  #Creating Azure Front Door
 module "frontdoor" {
   source              = "./modules/frontdoor"
   resource_group_name = var.resource_group_name
