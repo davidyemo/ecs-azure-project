@@ -3,8 +3,8 @@ resource "azurerm_resource_group" "resource_group" {
   location = var.location
 }
 ##
-resource "azurerm_resource_group" "example" {
-  name     = "example"
+resource "azurerm_resource_group" "destroy_rg" {
+  name     = "destroy_rg"
   location = "West Europe"
 }
 
