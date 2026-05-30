@@ -5,7 +5,10 @@ resource "azurerm_resource_group" "resource_group" {
 
 # add a comment to main.tf
 
-
+resource "azurerm_resource_group" "destroy_rg" {
+  name     = "destroy_rg"
+  location = "West Europe"
+}
 
 resource "azurerm_resource_group" "example" {
   name     = "example"
