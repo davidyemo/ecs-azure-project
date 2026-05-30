@@ -30,4 +30,4 @@ jobs:
 
     - name: Terraform Destroy
       working-directory: ./terraform
-      run: terraform destroy -auto-approve -target=azurerm_resource_group.destroy_rg
+      run: terraform destroy -auto-approve -target=azurerm_resource_group.example
