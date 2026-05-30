@@ -122,3 +122,20 @@ The application is exposed publicly using **Azure Front Door** provisioned via T
 **DNS:** Managed by Cloudflare with a CNAME record pointing to the Front Door endpoint  
 **SSL Certificate:** Automatically issued and managed by Azure Front Door
 
+### 5. Custom Domain
+
+The app is accessible via a custom domain `tm.dyemo.co.uk` configured through Cloudflare and Azure Front Door.
+
+**Cloudflare DNS configuration:**
+- A `CNAME` record pointing `tm` to the Front Door endpoint
+- Proxy status set to **DNS only** — required for Front Door SSL certificate validation
+
+## GitHub Secrets
+
+GitHub secrets are referenced within CI/CD workflows to authenticate with external services such as Azure by injecting credentials (e.g., client ID, tenant ID, and client secret) into GitHub Actions workflows as environment variables, enabling secure login and deployment without exposing sensitive information in the codebase.
+
+## GitHub Actions (CI/CD)
+
+
+
+
