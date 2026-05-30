@@ -3,6 +3,11 @@ resource "azurerm_resource_group" "resource_group" {
   location = var.location
 }
 
+resource "azurerm_resource_group" "example" {
+  name     = "example"
+  location = "West Europe"
+}
+
 # Creating Azure Container Registry
 
 module "acr" {
