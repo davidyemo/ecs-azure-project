@@ -2,11 +2,10 @@ resource "azurerm_resource_group" "resource_group" {
   name     = var.resource_group_name
   location = var.location
 }
-##
-resource "azurerm_resource_group" "example" {
-  name     = "example"
-  location = "West Europe"
-}
+
+# add a comment to main.tf
+
+
 
 resource "azurerm_resource_group" "example" {
   name     = "example"
