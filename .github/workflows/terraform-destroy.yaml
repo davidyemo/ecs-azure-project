@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  destroy:
+  terraform_destroy:
     runs-on: ubuntu-latest
 
     # Azure authentication credentials and Terraform variable values from GitHub secrets

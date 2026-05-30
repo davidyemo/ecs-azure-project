@@ -7,7 +7,7 @@ on:
       - main
 
 jobs:
-  build:
+  terraform_apply:
     runs-on: ubuntu-latest
 
     # Azure authentication credentials and Terraform variable values from GitHub secrets
