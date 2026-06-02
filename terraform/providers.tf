@@ -7,12 +7,12 @@ terraform {
     }
   }
 # Configure the Azure Resource Manager provider
-  backend "azurerm" {
-    resource_group_name  = "ecs-rg1"
-    storage_account_name = "ecstfstate"
-    container_name       = "content"
-    key                  = "terraform.tfstate"
-  }
+backend "azurerm" {
+resource_group_name  = "ecs-rg1"
+storage_account_name = "ecstfstate"
+container_name       = "content"
+key                  = "terraform.tfstate"
+ }
 }
 # Configure the Azure Resource Manager provider
 provider "azurerm" {
