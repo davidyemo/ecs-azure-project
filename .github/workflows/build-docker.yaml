@@ -1,4 +1,4 @@
-name: ECS Azure Pipeline
+name: docker-pipeline
 
 # Triggers on every push to main branch
 on:
@@ -7,7 +7,7 @@ on:
       - main
 
 jobs:
-  build:
+  build and push docker image:
     runs-on: ubuntu-latest
 
     steps:
