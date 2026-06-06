@@ -136,6 +136,43 @@ GitHub secrets are referenced within CI/CD workflows to authenticate with extern
 
 ## GitHub Actions (CI/CD)
 
+### Push Docker Image to ACR
+
+<img width="733" height="617" alt="docker-pipeline" src="https://github.com/user-attachments/assets/187e038b-0d7c-4623-9c4e-d491e1d6942a" />
+
+### Terraform Plan
+
+<img width="767" height="589" alt="Terraform-plan" src="https://github.com/user-attachments/assets/5bc6a65c-c27e-4677-b866-6b0acb531958" />
+
+### Terraform Apply
+
+<img width="671" height="547" alt="Terraform-apply" src="https://github.com/user-attachments/assets/cb53e14f-836d-438e-b279-9ccf177c817e" />
+
+
+### Terraform Destroy
+
+<img width="714" height="519" alt="Terraform-destroy" src="https://github.com/user-attachments/assets/3ab7355d-fd34-4475-ad51-33a22d378d61" />
+
+
+## Azure Container app and Front Door
+
+### Azure Container Apps Overview
+
+<img width="1913" height="438" alt="container-apps-overview" src="https://github.com/user-attachments/assets/59f46db4-56f7-47ef-8cfb-04154f51b4b8" />
+
+<img width="1600" height="874" alt="application-url" src="https://github.com/user-attachments/assets/88f7051e-a9ad-453b-85f8-aace88bf0e09" />
+
+### Azure Front Door Route and Dns Configuration
+
+<img width="1088" height="205" alt="frontdoor-route" src="https://github.com/user-attachments/assets/4fede13a-d131-46e3-a381-7406d42d5b02" />
+
+### Endpoint Overview
+
+<img width="1643" height="863" alt="endpoint" src="https://github.com/user-attachments/assets/db83b1d4-929a-4bda-b466-df5da1ed832a" />
+
+## Website Link: https://tm.dyemo.co.uk/
+
+
 
 
 
