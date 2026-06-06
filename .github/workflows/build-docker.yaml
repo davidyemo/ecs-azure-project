@@ -1,4 +1,4 @@
-name: docker-pipeline
+name: docker pipeline
 
 # Triggers on every push to main branch
 on:
