@@ -7,7 +7,7 @@ on:
       - main
 
 jobs:
-  build and push docker image:
+  build-and-push-dokcer-image:
     runs-on: ubuntu-latest
 
     steps:
