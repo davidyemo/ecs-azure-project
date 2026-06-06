@@ -31,3 +31,27 @@ variable "location" {
     default = "UK South"
   
 }
+
+variable "account_tier" {
+  description = "Storage account tier"
+  type        = string
+  default     = "Standard"
+}
+
+variable "account_replication_type" {
+  description = "Storage account replication type"
+  type        = string
+  default     = "LRS"
+}
+
+variable "storage_account_name" {
+  description = "Storage account name"
+  type        = string
+  default     = "ecstfstate"
+}
+
+variable "container_access_type" {
+  description = "Storage container access type"
+  type        = string
+  default     = "private"
+}

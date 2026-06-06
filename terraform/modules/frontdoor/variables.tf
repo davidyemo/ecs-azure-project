@@ -144,3 +144,4 @@ variable "certificate_type" {
     default = "ManagedCertificate"
 }
 
+

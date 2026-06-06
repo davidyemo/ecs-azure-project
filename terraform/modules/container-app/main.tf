@@ -1,3 +1,4 @@
+# Creating Azure Log Analytics workspace
 resource "azurerm_log_analytics_workspace" "log_analytics_workspace" {
   name                = var.log_analytics
   location            = var.location
