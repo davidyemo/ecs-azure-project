@@ -3,7 +3,7 @@ resource "azurerm_resource_group" "resource_group" {
   location = var.location
 }
 
-# add a comment to main.tf
+# add a comment to main.tf test pipeline
 
 resource "azurerm_resource_group" "destroy_rg" {
   name     = "destroy_rg"
