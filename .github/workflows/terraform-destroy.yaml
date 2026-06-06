@@ -36,4 +36,4 @@ jobs:
     # Destroy all Terraform managed infrastructure without manual approval
     - name: Terraform Destroy
       working-directory: ./terraform
-      run: terraform destroy -auto-approve -target=azurerm_resource_group.destroy_rg
+      run: terraform destroy -auto-approve -lock=false -target=azurerm_resource_group.destroy_rg
