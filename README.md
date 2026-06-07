@@ -134,7 +134,9 @@ The app is accessible via a custom domain `tm.dyemo.co.uk` configured through Cl
 
 GitHub secrets are referenced within CI/CD workflows to authenticate with external services such as Azure by injecting credentials (e.g., client ID, tenant ID, and client secret) into GitHub Actions workflows as environment variables, enabling secure login and deployment without exposing sensitive information in the codebase.
 
-## GitHub Actions (CI/CD)
+## GitHub Actions (CI/CD) Pipelines
+
+Four automated pipelines manage the build, deployment and infrastructure lifecycle of the project.
 
 ### Push Docker Image to ACR
 
@@ -156,13 +158,15 @@ GitHub secrets are referenced within CI/CD workflows to authenticate with extern
 
 ## Azure Container app and Front Door
 
+The application is hosted on Azure Container Apps and exposed publicly via Azure Front Door with a custom domain and managed SSL certificate.
+
 ### Azure Container Apps Overview
 
 <img width="1913" height="438" alt="container-apps-overview" src="https://github.com/user-attachments/assets/59f46db4-56f7-47ef-8cfb-04154f51b4b8" />
 
 <img width="1600" height="874" alt="application-url" src="https://github.com/user-attachments/assets/88f7051e-a9ad-453b-85f8-aace88bf0e09" />
 
-### Azure Front Door Route and Dns Configuration
+### Azure Front Door Route and Custom Domain
 
 <img width="1088" height="205" alt="frontdoor-route" src="https://github.com/user-attachments/assets/4fede13a-d131-46e3-a381-7406d42d5b02" />
 
