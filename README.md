@@ -1,6 +1,7 @@
 # TaskHub
-TaskHub is a cloud-native task management web application built with Python Flask, containerised with Docker, and deployed on Microsoft Azure using modern DevOps practices.
-The application allows users to create, manage, and track tasks with priority levels, categories, due dates, and completion status — all served securely over HTTPS via a custom domain.
+TaskHub is a task management web application built with Python Flask, containerised with Docker, and deployed on Microsoft Azure using modern DevOps practices.
+
+The application allows users to create, manage, and track tasks with priority levels, categories, due dates and completion status all served securely over HTTPS via a custom domain.
 
 ### Project Goals
 
